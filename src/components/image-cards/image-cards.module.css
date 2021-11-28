@@ -1,0 +1,26 @@
+.cards_wrapper {
+  display: grid;
+  grid: 1fr / repeat(auto-fit, minmax(155px, 1fr));
+  justify-content: center;
+  grid-gap: 1.5em 0;
+  height: 425px;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar on y-axis */
+.cards_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Text container */
+.text_wrapper {
+  text-align: center;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  .cards_wrapper {
+    height: unset;
+    overflow-y: unset;
+  }
+}

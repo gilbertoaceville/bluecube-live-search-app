@@ -1,0 +1,122 @@
+.drawer_container {
+  width: 240px;
+  background: var(--transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #d5d5d5;
+  padding: var(--secondary-spacer-gradient);
+}
+
+/* LOGO */
+.logo header h1 {
+  display: inline-flex;
+  color: var(--color-blue);
+  font-size: 25px;
+}
+
+.logo header h1 label {
+  padding: 0 0.2em;
+}
+
+/* Navigation items */
+.nav {
+  padding: var(--secondary-spacer-gradient);
+}
+
+.nav_links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_links li {
+  display: inline-flex;
+  margin-bottom: 0.5em;
+  height: 35px;
+  align-items: center;
+  padding: 0 25px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.nav_links li svg {
+  font-size: 16px;
+}
+
+.nav_links li svg path {
+  color: var(--color-gray);
+}
+
+.nav_links li:first-child svg path {
+  color: var(--color-blue);
+}
+
+.nav_links li:first-child {
+  border: 1px solid #d5d5d5;
+}
+
+.nav_links li:first-child a,
+.nav_links li:nth-child(3) a {
+  color: var(--color-secondary-black);
+  font-weight: 550;
+}
+
+.nav_links li a {
+  padding: var(--tertiary-spacer-gradient-one);
+  color: var(--color-gray);
+  font-size: 15px;
+}
+
+.nav_links li:nth-child(3) {
+  margin: 0.2em 0;
+}
+
+.nav_links li:nth-child(3) a {
+  text-transform: uppercase;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .drawer_container {
+    width: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  .drawer_container {
+    width: 240px;
+    border: none;
+    position: fixed;
+    z-index: 1;
+    background: var(--color-white);
+    height: 93%;
+    border-radius: 0px 24px 24px 0px;
+    padding: 1.5em 0;
+    z-index: 2;
+    top: 0;
+    box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+      12px 0 15px -4px rgba(31, 73, 125, 0.8),
+      -12px 0 15px -4px rgba(31, 73, 125, 0.8);
+    -webkit-transition: -webkit-transform 300ms
+      cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),
+      -webkit-transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  .remove_drawer .drawer_container {
+    transform: translateX(-150%);
+  }
+
+  .nav_links li {
+    margin: 0.5em 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .drawer_container {
+    width: 69%;
+    height: 92%;
+  }
+}

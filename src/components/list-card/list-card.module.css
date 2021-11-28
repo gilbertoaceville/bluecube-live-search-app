@@ -1,0 +1,41 @@
+.list_card_container {
+  width: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: .3em 0 2em 0;
+}
+
+.list_card_container ul {
+  width: 101.3px;
+  border-right: 1px solid var(--color-border);
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  box-shadow: 0 4px 4px -2px #c5bee7;
+  margin-top: .3em;
+}
+
+.list_card_container ul:last-child {
+    border: none;
+}
+
+.list_card_container ul li {
+  color: var(--color-gray);
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 550;
+  text-transform: capitalize;
+}
+
+.list_card_container ul li svg {
+    padding-left: .3em;
+}
+
+.list_card_container ul li svg path {
+  color: var(--color-gray);
+}

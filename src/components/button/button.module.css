@@ -1,0 +1,28 @@
+/* Button */
+.btn {
+    padding: .6em 1.8em;
+    outline: none;
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 4px;
+    font-size: 13px;
+    box-shadow: 0 4px 4px -2px var(--transparent);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:disabled {
+    opacity: .4;
+    cursor: not-allowed
+}
+
+.btn:disabled:hover {
+    background: transparent;
+    transform: scale(1);
+    transition: unset;
+    border: none;
+    color: #f00;
+}
