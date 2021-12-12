@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import SearchBar from "../searchbar/searchbar.component";
 import { BsFillBellFill } from "@react-icons/all-files/bs/BsFillBellFill";
 import { MdKeyboardArrowDown } from "@react-icons/all-files/md/MdKeyboardArrowDown";
@@ -20,9 +20,8 @@ import classes from "./navigation.module.css";
  * @returns jsx for Navigation Bar on the Right Layout
  */
 const Navigation = () => {
-  const [toggle, setToggle] = useState(true);
-
-  const onToggle = () => setToggle((toggle) => !toggle);
+  const [toggle, setToggle] = useReducer(state => !state, true);
+  
   /**
    *
    * @param {*} e === Synthetic Event
@@ -59,7 +58,7 @@ const Navigation = () => {
         </div>
         <SearchBar />
         <div className={nav_icon}>
-          <BsFillBellFill color={primaryColor} onClick={onToggle} />
+          <BsFillBellFill color={primaryColor} onClick={setToggle} />
           <span className={notification_number}>3</span>
           <div
             style={{ display: toggle ? "block" : "none" }}

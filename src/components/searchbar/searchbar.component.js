@@ -27,9 +27,25 @@ const SearchBar = () => {
     setQuery(text);
   };
   const { form_container } = classes;
+
+  // useEffect(() => {
+  //   if (query !== "") {
+  //     debounce(() => {
+  //       const searchQuery = (e) => {
+  //         setQuery(e.target.value);
+  //       };
+  //       document.querySelector("input").addEventListener("change", searchQuery);
+  //     }, 10000)();
+
+  //     return () =>
+  //       document
+  //         .querySelector("input")
+  //         .removeEventListener("change", searchQuery);
+  //   }
+  // }, [query]);
   return (
     <form
-      onSubmit={(e) => searchQuery(e, inputRef.current.value)}
+      onSubmit={(e) => searchQuery(e, inputRef.current.value.trim())}
       className={form_container}
     >
       <HiOutlineSearch color="#7e7d84" onClick={()=>alert(4)} />
