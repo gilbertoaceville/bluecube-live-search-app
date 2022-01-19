@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import SearchBar from "../searchbar/searchbar.component";
 import { BsFillBellFill } from "@react-icons/all-files/bs/BsFillBellFill";
 import { MdKeyboardArrowDown } from "@react-icons/all-files/md/MdKeyboardArrowDown";
